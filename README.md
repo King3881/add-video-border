@@ -33,7 +33,7 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
 
 ## Usage
 
-1.  **Run the script with command-line arguments:**
+1.  **Run the script with command-line arguments :**
 
     ```bash
     python add_vid_border.py input.mp4 output.mp4
@@ -41,6 +41,14 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
 
     *   Replace `input.mp4` with the name of your input video file.
     *   Replace `output.mp4` with the desired name for the output video file.
+    *   Default 5% border
+
+    ```bash
+    python add_vid_border.py input.mp4 output.mp4 --border 10
+    ```
+
+    * 10% border around the video 
+
 
 2.  **Alternatively, run the script without arguments:**
 
