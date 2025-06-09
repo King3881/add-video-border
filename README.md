@@ -8,6 +8,7 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
 *   Adds black borders to the top and bottom (approximately 5% each).
 *   Maximizes the video area while maintaining the original aspect ratio.
 *   Uses OpenCV for video processing.
+*   **Accepts input and output filenames as command-line arguments.**
 
 ## Prerequisites
 
@@ -32,19 +33,25 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
 
 ## Usage
 
-1.  **Prepare your input video:** Rename your input video file to `input.mp4` and place it in the same directory as the `add_vid_border.py` script.
+1.  **Run the script with command-line arguments:**
 
-2.  **Run the script:**
+    ```bash
+    python add_vid_border.py input.mp4 output.mp4
+    ```
+
+    *   Replace `input.mp4` with the name of your input video file.
+    *   Replace `output.mp4` with the desired name for the output video file.
+
+2.  **Alternatively, run the script without arguments:**
 
     ```bash
     python add_vid_border.py
     ```
 
-3.  The processed video will be saved as `output.mp4` in the same directory.
+    *   If you run the script without arguments, it will use the default input filename `input.mp4` and the default output filename `output.mp4`.  Make sure to rename your input video to `input.mp4` in this case.
 
 ## Customization
 
-*   To change the input and output filenames, modify the `input_video` and `output_video` variables in the `add_vid_border.py` script.
 *   To adjust the border size, you'll need to modify the script's calculations (the `0.9` value controls the maximum video height).
 
 ## License
