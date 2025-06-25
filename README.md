@@ -10,11 +10,16 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
 *   Uses OpenCV for video processing.
 *   **Accepts input and output filenames as command-line arguments.**
 
+*   NEW
+*   add_vid_border_with_audio.py use ffmpeg to merge the original video audio into the bordered video
+*   ffmpeg.exe included
+
 ## Prerequisites
 
 *   Python 3.6 or higher
 *   OpenCV (`opencv-python`)
 *   NumPy (`numpy`)
+*   ffmpeg (for audio included)
 
 ## Installation
 
@@ -31,6 +36,10 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
     pip install opencv-python numpy
     ```
 
+[Optional]
+3. Install/Download ffmpeg exe (for add_vid_border_with_audio.py only)
+4. Put ffmpeg.exe in the same directory with add_vid_border_with_audio.py
+
 ## Usage
 
 1.  **Run the script with command-line arguments :**
@@ -43,11 +52,19 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
     *   Replace `output.mp4` with the desired name for the output video file.
     *   Default 5% border
 
+
     ```bash
     python add_vid_border.py input.mp4 output.mp4 --border 10
     ```
 
-    * 10% border around the video 
+    * 10% border around the video
+  
+
+     ```bash
+    python add_vid_border_with_audio.py input.mp4 output.mp4
+    ```
+
+    * add border and include audio
 
 
 2.  **Alternatively, run the script without arguments:**
@@ -57,6 +74,8 @@ This Python script resizes an MP4 video and adds black borders (approximately 5%
     ```
 
     *   If you run the script without arguments, it will use the default input filename `input.mp4` and the default output filename `output.mp4`.  Make sure to rename your input video to `input.mp4` in this case.
+
+
 
 ## Customization
 
